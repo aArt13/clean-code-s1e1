@@ -34,7 +34,8 @@ body {
   margin: 0 auto 0;
 }
 
-.task {
+.task,
+.task-label {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -131,7 +132,7 @@ li > input[type="checkbox"] {
   margin: 0 10px;
 }
 
-li > label {
+li > .task-label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
@@ -153,7 +154,7 @@ li > .input-task {
 }
 
 /* completed */
-#completed-tasks label {
+#completed-tasks .task-label {
   text-decoration: line-through;
   color: #888;
 }
@@ -161,6 +162,16 @@ li > .input-task {
 /* edit task */
 ul li .input-task {
   display: none;
+  /* visibility: hidden; */
+}
+
+ul li .edit-task {
+  display: block;
+}
+
+.edit-label {
+  display: none;
+  /* visibility: hidden; */
 }
 
 .editmode .input-task {
