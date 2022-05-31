@@ -37,17 +37,18 @@ body {
   display: flex;
 }
 
-ul {
+.form__list {
   margin: 0;
   padding: 0px;
 }
 
-li, 
+.form__item, 
 h3 {
   list-style: none;
 }
 
-input,
+.form__task,
+.form__checkbox,
 .form__btn {
   outline: none;
 }
@@ -67,8 +68,8 @@ input,
 }
 
 /* heading */
-h3,
-label[for="form__new-task"] {
+.form__title,
+.form__new-label {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -96,7 +97,7 @@ label[for="form__new-task"] {
 }
 
 /* new task */
-label[for="form__new-task"] {
+.form__new-label {
   display: block;
   margin: 0 0 20px;
 }
@@ -106,7 +107,7 @@ label[for="form__new-task"] {
 }
 
 /* task list */
-li {
+.form__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -116,22 +117,22 @@ li {
   align-items: center;
 }
 
-li > * {
+.form__item > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.form__item > .form__checkbox {
   margin: 0 10px;
 }
 
-li > .form__label {
+.form__item > .form__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li > .form__input {
+.form__item > .form__input {
   width: 226px;
 }
 
@@ -152,12 +153,12 @@ li > .form__input {
 }
 
 /* edit task */
-ul li .form__input {
+.form__list .form__item .form__input {
   display: none;
   /* visibility: hidden; */
 }
 
-ul li .edit-task {
+.form__list .form__item .edit-task {
   display: block;
 }
 
@@ -171,7 +172,7 @@ ul li .edit-task {
   width: 224px;
 }
 
-.editmode label {
+.editmode .form__label {
   display: none;
 }
 

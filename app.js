@@ -22,6 +22,7 @@ var createNewTaskElement=function(taskString){
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
+    
     //label
     var label=document.createElement("label");//label
     //input (text)
@@ -40,6 +41,7 @@ var createNewTaskElement=function(taskString){
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className="form__checkbox";
     editInput.type="text";
     editInput.className="form__task form__input";
 
